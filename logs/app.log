@@ -1,0 +1,17 @@
+2025-03-06T21:39:19.527Z [info]: Server is listening on http://localhost:3000
+2025-03-06T21:39:23.599Z [info]: GET request received at port 3000
+2025-03-06T21:39:23.603Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-06T21:43:04.601Z [info]: Server is listening on http://localhost:3000
+2025-03-06T21:43:10.040Z [info]: GET request received at port 3000
+2025-03-06T21:43:10.044Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-06T21:43:33.951Z [info]: POST request received at port 3000
+2025-03-06T21:43:33.962Z [info]: Status Code: 201 | Dog treats added to list
+2025-03-06T21:43:41.105Z [info]: GET request received at port 3000
+2025-03-06T21:43:41.106Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-06T21:44:27.270Z [info]: PUT request received at port 3000
+2025-03-06T21:44:27.272Z [info]: Status Code: 200 | Dog treats updated successfully
+2025-03-06T21:44:33.765Z [info]: GET request received at port 3000
+2025-03-06T21:44:33.767Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-06T21:44:50.919Z [info]: DELETE request received at port 3000
+2025-03-06T21:44:50.921Z [info]: Status Code: 200 | Deletion successful for item at index 5: 
+{"name":"Dog leash","quantity":"13","price":"3.96","bought":"false"} 
