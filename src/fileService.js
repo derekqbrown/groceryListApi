@@ -1,5 +1,5 @@
 const fs = require('fs');
-const GROCERY_LIST_FILE = '../data/groceryList.json';
+const GROCERY_LIST_FILE = './data/groceryList.json';
 
 function readFile(callback) {
     fs.readFile(GROCERY_LIST_FILE, (err, data) => {

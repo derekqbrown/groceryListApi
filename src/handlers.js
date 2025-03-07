@@ -34,6 +34,7 @@ function handlePutRequest(_req, res, body, index) {
     if (!name && !price && !quantity && !bought) {
         return sendResponse(res, 400, "At least one field is required to update.");
     }
+    
     readFile((err, groceryList) => {
         if (err) {
             return sendResponse(res, 500, "Internal Server Error");
@@ -41,7 +42,16 @@ function handlePutRequest(_req, res, body, index) {
         if (index >= groceryList.length || index < 0) {
             return sendResponse(res, 404, `Item at index ${index + 1} not found`);
         }
-        groceryList[index] = { name, quantity, price, bought };
+        if(name){ groceryList[index].name = name;}
+        if(price){ groceryList[index].price = price;}
+        if(quantity){ groceryList[index].quantity = quantity;}
+        if(bought){ groceryList[index].bought = bought;}
+        groceryList[index] = { // this ensures the order is uniform when updating
+            name:groceryList[index].name, 
+            quantity:groceryList[index].quantity,
+            price:groceryList[index].price,
+            bought:groceryList[index].bought
+        };
         writeFile(groceryList, (err) => {
             if (err) {
                 return sendResponse(res, 500, "Internal Server Error");
