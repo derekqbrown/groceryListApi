@@ -1,0 +1,95 @@
+2025-03-28T18:44:38.729Z [info]: Server is listening on http://localhost:3001
+2025-03-28T18:45:32.355Z [info]: GET request received at port 3001
+2025-03-28T18:45:32.359Z [error]: Status Code: 500 | Internal Server Error
+2025-03-28T18:48:21.033Z [info]: Server is listening on http://localhost:3001
+2025-03-28T18:48:41.832Z [info]: GET request received at port 3001
+2025-03-28T18:48:41.836Z [error]: Status Code: 500 | Internal Server Error in handleGetRequest
+2025-03-28T18:49:27.133Z [info]: Server is listening on http://localhost:3001
+2025-03-28T18:49:30.127Z [info]: GET request received at port 3001
+2025-03-28T18:49:30.136Z [error]: Status Code: 500 | Internal Server Error in handleGetRequest:
+2025-03-28T18:52:27.720Z [info]: Server is listening on http://localhost:3001
+2025-03-28T18:52:30.036Z [info]: GET request received at port 3001
+2025-03-28T18:52:30.042Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:05:00.310Z [info]: Server is listening on http://localhost:3001
+2025-03-28T19:05:07.389Z [info]: GET request received at port 3001
+2025-03-28T19:05:07.393Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:07:05.749Z [info]: GET request received at port 3001
+2025-03-28T19:07:05.752Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:07:05.757Z [info]: GET request received at port 3001
+2025-03-28T19:07:05.760Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:14:11.810Z [info]: GET request received at port 3001
+2025-03-28T19:14:11.812Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:14:11.814Z [info]: GET request received at port 3001
+2025-03-28T19:14:11.816Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:15:56.845Z [info]: GET request received at port 3001
+2025-03-28T19:15:56.846Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:15:56.848Z [info]: GET request received at port 3001
+2025-03-28T19:15:56.849Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:16:08.723Z [info]: GET request received at port 3001
+2025-03-28T19:16:08.725Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:16:08.728Z [info]: GET request received at port 3001
+2025-03-28T19:16:08.730Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:16:43.655Z [info]: GET request received at port 3001
+2025-03-28T19:16:43.657Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:16:43.658Z [info]: GET request received at port 3001
+2025-03-28T19:16:43.661Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:16:46.208Z [info]: GET request received at port 3001
+2025-03-28T19:16:46.209Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:16:46.211Z [info]: GET request received at port 3001
+2025-03-28T19:16:46.213Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:17:20.061Z [info]: GET request received at port 3001
+2025-03-28T19:17:20.062Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:17:20.064Z [info]: GET request received at port 3001
+2025-03-28T19:17:20.066Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:17:42.801Z [info]: GET request received at port 3001
+2025-03-28T19:17:42.803Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:17:42.806Z [info]: GET request received at port 3001
+2025-03-28T19:17:42.809Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:17:45.115Z [info]: GET request received at port 3001
+2025-03-28T19:17:45.116Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:18:05.662Z [info]: GET request received at port 3001
+2025-03-28T19:18:05.663Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:18:05.666Z [info]: GET request received at port 3001
+2025-03-28T19:18:05.668Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:23:40.900Z [info]: GET request received at port 3001
+2025-03-28T19:23:40.901Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:23:40.903Z [info]: GET request received at port 3001
+2025-03-28T19:23:40.904Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:23:45.482Z [info]: Server is listening on http://localhost:3001
+2025-03-28T19:23:48.126Z [info]: GET request received at port 3001
+2025-03-28T19:23:48.133Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:23:48.136Z [info]: GET request received at port 3001
+2025-03-28T19:23:48.138Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:24:22.522Z [info]: POST request received at port 3001
+2025-03-28T19:24:22.525Z [info]: Status Code: 201 | Collar added to list
+2025-03-28T19:24:22.529Z [info]: GET request received at port 3001
+2025-03-28T19:24:22.530Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:24:45.220Z [info]: PUT request received at port 3001
+2025-03-28T19:24:45.223Z [info]: Status Code: 200 | BANANA updated successfully
+2025-03-28T19:24:45.226Z [info]: GET request received at port 3001
+2025-03-28T19:24:45.228Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:25:02.488Z [info]: GET request received at port 3001
+2025-03-28T19:25:02.490Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:27:12.419Z [info]: DELETE request received at port 3001
+2025-03-28T19:27:12.421Z [info]: Status Code: 200 | Deletion successful for item at index 8: 
+{"name":"Collar","quantity":2,"price":31,"bought":true} 
+2025-03-28T19:27:12.424Z [info]: GET request received at port 3001
+2025-03-28T19:27:12.426Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:28:22.937Z [info]: GET request received at port 3001
+2025-03-28T19:28:22.938Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:28:22.940Z [info]: GET request received at port 3001
+2025-03-28T19:28:22.942Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:28:33.994Z [info]: PUT request received at port 3001
+2025-03-28T19:28:33.996Z [info]: Status Code: 200 |  updated successfully
+2025-03-28T19:28:34.000Z [info]: GET request received at port 3001
+2025-03-28T19:28:34.001Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:28:46.153Z [info]: GET request received at port 3001
+2025-03-28T19:28:46.154Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:29:36.280Z [info]: PUT request received at port 3001
+2025-03-28T19:29:36.282Z [info]: Status Code: 200 |  updated successfully
+2025-03-28T19:29:36.285Z [info]: GET request received at port 3001
+2025-03-28T19:29:36.287Z [info]: Status Code: 200 | List successfully retrieved
+2025-03-28T19:29:54.210Z [info]: PUT request received at port 3001
+2025-03-28T19:29:54.212Z [info]: Status Code: 200 |  updated successfully
+2025-03-28T19:29:54.214Z [info]: GET request received at port 3001
+2025-03-28T19:29:54.216Z [info]: Status Code: 200 | List successfully retrieved

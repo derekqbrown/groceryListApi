@@ -4,7 +4,7 @@ const sendResponse = require('./responseService');
 function handleGetRequest(_req, res) {
     readFile((err, groceryList) => {
         if (err) {
-            return sendResponse(res, 500, "Internal Server Error");
+            return sendResponse(res, 500, "Internal Server Error in handleGetRequest:", err);
         }
         sendResponse(res, 200, "List successfully retrieved", { groceryList });
     });
@@ -17,12 +17,12 @@ function handlePostRequest(_req, res, body) {
     }
     readFile((err, groceryList) => {
         if (err) {
-            return sendResponse(res, 500, "Internal Server Error");
+            return sendResponse(res, 500, "Internal Server Error in handlePostRequest 1");
         }
         groceryList.push({ name, quantity, price, bought });
         writeFile(groceryList, (err) => {
             if (err) {
-                return sendResponse(res, 500, "Internal Server Error");
+                return sendResponse(res, 500, "Internal Server Error in handlePostRequest 2");
             }
             sendResponse(res, 201, `${name} added to list`);
         });
@@ -37,7 +37,7 @@ function handlePutRequest(_req, res, body, index) {
     
     readFile((err, groceryList) => {
         if (err) {
-            return sendResponse(res, 500, "Internal Server Error");
+            return sendResponse(res, 500, "Internal Server Error in handlePutRequest 1");
         }
         if (index >= groceryList.length || index < 0) {
             return sendResponse(res, 404, `Item at index ${index + 1} not found`);
@@ -54,7 +54,7 @@ function handlePutRequest(_req, res, body, index) {
         };
         writeFile(groceryList, (err) => {
             if (err) {
-                return sendResponse(res, 500, "Internal Server Error");
+                return sendResponse(res, 500, "Internal Server Error in handlePutRequest 2");
             }
             sendResponse(res, 200, `${name} updated successfully`);
         });
@@ -67,7 +67,7 @@ function handleDeleteRequest(_req, res, index) {
     }
     readFile((err, groceryList) => {
         if (err) {
-            return sendResponse(res, 500, "Internal Server Error");
+            return sendResponse(res, 500, "Internal Server Error in handleDeleteRequest 1");
         }
         if (index >= groceryList.length || index < 0) {
             return sendResponse(res, 404, `Item at index ${index + 1} not found`);
@@ -76,7 +76,7 @@ function handleDeleteRequest(_req, res, index) {
         groceryList.splice(index, 1);
         writeFile(groceryList, (err) => {
             if (err) {
-                return sendResponse(res, 500, "Internal Server Error");
+                return sendResponse(res, 500, "Internal Server Error in handleDeleteRequest 2");
             }
             sendResponse(res, 200, `Deletion successful for item at index ${index +1}: \n${JSON.stringify(itemToDelete)} `);
         });

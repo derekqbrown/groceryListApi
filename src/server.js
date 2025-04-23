@@ -1,46 +1,51 @@
-const http = require('http');
+const express = require('express');
+const cors = require('cors');
 const logger = require('./util/logger').logger;
 const { handleGetRequest, handlePostRequest, handlePutRequest, handleDeleteRequest } = require('./handlers');
 
-const PORT = 3000;
+const app = express();
+const PORT = 3001;
 
-const server = http.createServer((req, res) => {
-    let body = "";
+app.use(cors()); // Enable CORS for all routes
+app.use(express.json()); // Parse JSON request bodies
 
-    req.on('data', (chunk) => {
-        body += chunk;
-    }).on("end", () => {
-        body = body.length > 0 ? JSON.parse(body) : {};
-        const contentType = { "Content-Type": "application/json" };
-
-        if (req.url.startsWith("/items")) {
-            const index = parseInt(req.url.split("/")[2])-1; // indices are 1-based in URL, 0-based for arrays here.
-            logger.info(`${req.method} request received at port ${PORT}`);
-
-            switch (req.method) {
-                case "POST":
-                    handlePostRequest(req, res, body);
-                    break;
-                case "GET":
-                    handleGetRequest(req, res);
-                    break;
-                case "PUT":
-                    handlePutRequest(req, res, body, index);
-                    break;
-                case "DELETE":
-                    handleDeleteRequest(req, res, index);
-                    break;
-                default:
-                    sendResponse(res, 405, `Unauthorized Method: ${req.method}. \nAllowed methods: GET, POST, PUT, DELETE`);
-            }
-        } else {
-            sendResponse(res, 404, `Resource not found at URL ${req.url}`);
-        }
-    });
+// Middleware for logging requests
+app.use('/items/:id?', (req, res, next) => {
+    logger.info(`${req.method} request received at port ${PORT}`);
+    next();
 });
 
-server.listen(PORT, () => {
+app.get('/items', (req, res) => {
+    handleGetRequest(req, res);
+});
+
+app.post('/items', (req, res) => {
+    handlePostRequest(req, res, req.body);
+});
+
+app.put('/items/:id', (req, res) => {
+    const index = parseInt(req.params.id) - 1;
+    handlePutRequest(req, res, req.body, index);
+});
+
+app.delete('/items/:id', (req, res) => {
+    const index = parseInt(req.params.id) - 1;
+    handleDeleteRequest(req, res, index);
+});
+
+// Error handling for 404 (Not Found)
+app.use((req, res) => {
+    res.status(404).send(`Resource not found at URL ${req.url}`);
+});
+
+// Error handling for other errors (500 Internal Server Error)
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+
+app.listen(PORT, () => {
     logger.info(`Server is listening on http://localhost:${PORT}`);
 });
 
-module.exports = server;
+module.exports = app;
